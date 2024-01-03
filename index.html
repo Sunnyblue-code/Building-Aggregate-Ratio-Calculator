@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Building Aggregate Calculator</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h1>This is An Aggregate Ratio Calculator</h1>
+                <p><span class="cement">0</span> loads of Cement, <span class="sand">0</span> loads of Sand<span
+                        class="gravelcoma">,</span> <span class="gravel">0</span> <span class="gravelspan"> loads of
+                        Gravel</span> </p>
+            </div>
+            <form>
+                <label for="ratio">Quantity</label>
+                <input type="number" class="ratios" name="ratio">
+                <label for="aggregate">Select the Aggregate you want</label>
+                <select id="aggregate" name="aggregate">
+                    <option value="cementss">Cement</option>
+                    <option value="sandss">Sand</option>
+                    <option value="gravelss">Gravel</option>
+                </select>
+                <p>What ratios do you want it?</p>
+                <div class="ratio">
+
+                    <div>
+                        <label for="input1">Cement</label>
+                        <input class="cement_ratio" type="number" name="number">
+                    </div>
+                    <div>
+                        <label for="input1">Sand</label>
+                        <input class="sand_ratio" type="number" name="number">
+                    </div>
+                    <div>
+                        <label for="input1">Gravel</label>
+                        <input class="gravel_ratio" type="number" name="number">
+                    </div>
+                </div>
+
+                <button class="btn" type="submit">Result</button>
+                <button class="Refresh" type="submit">Refresh</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

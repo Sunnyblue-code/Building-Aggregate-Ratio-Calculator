@@ -1,0 +1,101 @@
+/* CSS code */
+body {
+  background-color: #f8f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #5ebafc;
+}
+
+.top-bar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.content {
+  background-color: #5ebafc;
+  padding: 20px;
+  text-align: center;
+}
+
+.content h1 {
+  color: #fcf4f4;
+  font-size: 24px;
+}
+
+.content p {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.content span {
+  color: #5a4e4e;
+  font-weight: bold;
+}
+
+.content form {
+  margin-top: 20px;
+}
+
+.content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.content input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.content select {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.content button {
+  display: inline block;
+  width: 100px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #8c7b7b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ratio {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ratio input[type="number"] {
+  width: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.ratios input[type="number"] {
+  width: 40px;
+  padding: 5px;
+  border: 10px solid #ccc;
+}
+
+.content span.gravelspan {
+  color: #ffffff;
+}
