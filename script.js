@@ -34,48 +34,58 @@ const gravelcoma = document.getElementsByClassName("gravelcoma");
 
 btn[0].addEventListener("click", (event) => {
   event.preventDefault();
-  const cement_ratio = parseInt(
-    document.getElementsByClassName("cement_ratio")[0].value
-  );
-  const ratio = parseInt(document.getElementsByClassName("ratios")[0].value);
-  const sand_ratio = parseInt(
-    document.getElementsByClassName("sand_ratio")[0].value
-  );
-  const gravel_ratio = parseInt(
-    document.getElementsByClassName("gravel_ratio")[0].value
-  );
-
-  const select = document.getElementById("aggregate").value;
-  const selectionIndex = {
-    cementss: 0,
-    sandss: 1,
-    gravelss: 2,
-  };
-  if (!gravel_ratio) {
-    gravel[0].style.display = "none";
-    gravelspan[0].style.display = "none";
-    gravelcoma[0].style.display = "none";
+  // if entry is empty
+  if (
+    document.getElementsByClassName("cement_ratio")[0].value === "" ||
+    document.getElementsByClassName("sand_ratio")[0].value === ""
+  ) {
+    document.getElementsByClassName("error")[0].innerHTML =
+      "Please fill atleast two Ratios of Cement, Sand or Gravel";
   } else {
-    gravel[0].style.display = "inline";
-    gravelspan[0].style.display = "inline";
-    gravelcoma[0].style.display = "inline";
-  }
-  const selectedIndex = selectionIndex[select];
-  if (selectedIndex !== undefined) {
-    const adjustedRatios = adjustRatio(
-      ratio,
-      [cement_ratio, sand_ratio, gravel_ratio],
-      selectedIndex
+    document.getElementsByClassName("error")[0].style.display = "none";
+    const cement_ratio = parseInt(
+      document.getElementsByClassName("cement_ratio")[0].value
     );
-    cement[0].innerHTML = Number.isInteger(adjustedRatios[0])
-      ? adjustedRatios[0]
-      : adjustedRatios[0].toFixed(2);
-    sand[0].innerHTML = Number.isInteger(adjustedRatios[1])
-      ? adjustedRatios[1]
-      : adjustedRatios[1].toFixed(2);
-    gravel[0].innerHTML = Number.isInteger(adjustedRatios[2])
-      ? adjustedRatios[2]
-      : adjustedRatios[2].toFixed(2);
+    const ratio = parseInt(document.getElementsByClassName("ratios")[0].value);
+    const sand_ratio = parseInt(
+      document.getElementsByClassName("sand_ratio")[0].value
+    );
+    const gravel_ratio = parseInt(
+      document.getElementsByClassName("gravel_ratio")[0].value
+    );
+
+    const select = document.getElementById("aggregate").value;
+    const selectionIndex = {
+      cementss: 0,
+      sandss: 1,
+      gravelss: 2,
+    };
+    if (!gravel_ratio) {
+      gravel[0].style.display = "none";
+      gravelspan[0].style.display = "none";
+      gravelcoma[0].style.display = "none";
+    } else {
+      gravel[0].style.display = "inline";
+      gravelspan[0].style.display = "inline";
+      gravelcoma[0].style.display = "inline";
+    }
+    const selectedIndex = selectionIndex[select];
+    if (selectedIndex !== undefined) {
+      const adjustedRatios = adjustRatio(
+        ratio,
+        [cement_ratio, sand_ratio, gravel_ratio],
+        selectedIndex
+      );
+      cement[0].innerHTML = Number.isInteger(adjustedRatios[0])
+        ? adjustedRatios[0]
+        : adjustedRatios[0].toFixed(2);
+      sand[0].innerHTML = Number.isInteger(adjustedRatios[1])
+        ? adjustedRatios[1]
+        : adjustedRatios[1].toFixed(2);
+      gravel[0].innerHTML = Number.isInteger(adjustedRatios[2])
+        ? adjustedRatios[2]
+        : adjustedRatios[2].toFixed(2);
+    }
   }
   // adding referesh button
   Refresh[0].addEventListener("click", (event) => {
