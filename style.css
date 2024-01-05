@@ -101,3 +101,22 @@ body {
 .content span.gravelspan {
   color: #ffffff;
 }
+
+/* Media query for screens with maximum width of 600px */
+@media (max-width: 600px) {
+  /* Modify styles for .ratio class */
+  .ratio {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Modify styles for .ratio input[type="number"] */
+  .ratio input[type="number"] {
+    width: 100%;
+  }
+
+  /* Modify styles for .ratios input[type="number"] */
+  .ratios input[type="number"] {
+    width: 100%;
+  }
+}
